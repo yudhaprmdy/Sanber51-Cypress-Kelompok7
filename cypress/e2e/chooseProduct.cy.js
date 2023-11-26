@@ -1,4 +1,4 @@
-describe('Choose Product', () => {
+describe('Choose Product Functionality', () => {
     beforeEach(() => {
       return cy.visit('https://magento.softwaretestingboard.com/')
     })
@@ -15,13 +15,12 @@ describe('Choose Product', () => {
 
     it('Choose a Product for Men', () => {
         cy.get('#ui-id-5').click()
-        cy.get('.categories-menu > :nth-child(2) > :nth-child(2) > a').click() //cath jacket
-        cy.get(':nth-child(2) > .product-item-info > .details > .name > .product-item-link').click() //choose jacket
+        cy.get('.categories-menu > :nth-child(2) > :nth-child(2) > a').click()
+        cy.get(':nth-child(2) > .product-item-info > .details > .name > .product-item-link').click()
         cy.get('#option-label-size-143-item-169').click()
         cy.get('#option-label-color-93-item-58').click()
         cy.get('#product-addtocart-button').click()
         cy.get('#maincontent').should('contain', 'You added Montana Wind Jacket to your shopping cart.')
         cy.get('div.minicart-wrapper').click()
     })
-
 })
