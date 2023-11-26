@@ -4,8 +4,8 @@ describe('Choose Product Functionality', () => {
     })
 
     it('Choose a Product for Women', () => {
-        cy.contains("Women").click()
-        cy.contains('Radiant Tee').click()
+        cy.get('#ui-id-4').click()
+        cy.contains("Radiant Tee").click()
         cy.get('#option-label-size-143-item-168').click()
         cy.get('#option-label-color-93-item-56').click()
         cy.get('#product-addtocart-button').click()
