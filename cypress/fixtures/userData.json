@@ -1,5 +1,9 @@
 {
+    "valid": {
     "valid_email": "magicgibsonbeat@gmail.com",
-    "valid_password": "MagicGibsonBeat123",
+    "valid_password": "MagicGibsonBeat123"
+    },
+    "invalid":{
     "invalid_email": "agicgibsonbeat@gmail.com"
+    }
 }
